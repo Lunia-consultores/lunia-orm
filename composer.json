@@ -1,0 +1,54 @@
+{
+    "name": "lunia-consultores/lunia-orm",
+    "description": "ORM interno para proyectos de Lunia",
+    "keywords": [
+        "lunia-consultores",
+        "lunia-orm"
+    ],
+    "homepage": "https://github.com/lunia-consultores/lunia-orm",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Lunia Consultores S.L.",
+            "email": "desarrollo@lunia.es",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LuniaConsultores\\LuniaOrm\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LuniaConsultores\\LuniaOrm\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LuniaConsultores\\LuniaOrm\\LuniaOrmServiceProvider"
+            ],
+            "aliases": {
+                "LuniaOrm": "LuniaConsultores\\LuniaOrm\\LuniaOrmFacade"
+            }
+        }
+    }
+}
