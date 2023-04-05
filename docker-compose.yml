@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  luni-orm-php:
+    build:
+      context: .
+      dockerfile: docker/php8.1/Dockerfile
+    user: "1000:1000"
+    volumes:
+      - .:/var/www/html

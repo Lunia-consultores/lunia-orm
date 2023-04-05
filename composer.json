@@ -44,10 +44,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LuniaConsultores\\LuniaOrm\\LuniaOrmServiceProvider"
             ],
             "aliases": {
-                "LuniaOrm": "LuniaConsultores\\LuniaOrm\\LuniaOrmFacade"
             }
         }
     }
